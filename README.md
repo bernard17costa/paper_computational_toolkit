@@ -4,3 +4,5 @@
 ### <sup>1</sup>Institute of Biomedical Sciences, University of São Paulo, Brazil  
 ### <sup>2</sup>School of Psychology, University of Surrey, UK 
 ### *Corresponding authors (c.feherdasilva@surrey.ac.uk, bernard.costa@usp.br) 
+
+1_sim_behaviours_surrogates.py: generates all the be
