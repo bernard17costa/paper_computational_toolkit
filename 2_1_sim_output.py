@@ -200,13 +200,19 @@ def shift_lose_response(seq1,seq2):
   return shift/count
 
 #correlation 
-def correlation(seq1,seq2,lag):
-    if(lag<=0):
-        auto_neg = 1/(len(seq1)-lag)*sum(multi_neg(seq1,seq2,-lag))
-        return auto_neg
+def correlation(seq1, seq2, lag):
+    n = len(seq1)
+    lag_abs = abs(lag)
+
+    if lag_abs >= n:
+        return 0
+
+    if lag >= 0:
+        # shift seq2 forward → positive lag
+        return sum(seq1[i] * seq2[i + lag_abs] for i in range(n - lag_abs)) / (n - lag_abs)
     else:
-        auto_pos = 1/(len(seq1)-lag)*sum(multi_pos(seq1,seq2,lag))
-        return auto_pos
+        # shift seq2 backward → negative lag
+        return sum(seq1[i + lag_abs] * seq2[i] for i in range(n - lag_abs)) / (n - lag_abs)
 
 # --------------------------------------------------------
 # MARKOV STRUCTURE
