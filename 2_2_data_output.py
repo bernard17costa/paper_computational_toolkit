@@ -27,9 +27,9 @@
 # - Cleans raw CSV formatting artifacts ([], spaces)
 # - Transposes the dataset (row ↔ column)
 # - Outputs 3 processed CSV files:
-#     sim_output1.csv → behavioral + correlation metrics
-#     sim_output2.csv → M0 structure
-#     sim_output3.csv → M2 structure
+#     2_3_data_sim_output1.csv → behavioral + correlation metrics
+#     2_3_data_sim_output2.csv → M0 structure
+#     2_3_data_sim_output3.csv → M2 structure
 ###########################################################
 import numpy as np
 import random
