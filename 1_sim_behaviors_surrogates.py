@@ -248,7 +248,7 @@ def main():
         random.shuffle(win_stay_M2[1])
         print("WSLS,comp,SURROGATE,M2,",win_stay_M2[1], file=f)
 
-        print("IO,comp,INPUT,M0,",IO_M0, file=f)
+        print("IO,comp,INPUT,M0,",markovM0, file=f)
         random.shuffle(IO_M0)
         print("IO,comp,SURROGATE,M0,",IO_M0, file=f)
         print("IO,comp,INPUT,M2,",IO_M2[0], file=f)
